@@ -106,4 +106,23 @@ function fizzbuzz(){
         }
     }
 }
-console.log('FizzBuzz: ' + fizzbuzz());
+// console.log('FizzBuzz: ' + fizzbuzz());
+
+
+//Longest Words
+
+function longestWord(sen){
+    //create filtered array with match
+    const wordArr = sen.toLowerCase().match(/[a-z0-9]+/g);
+    //sort by length
+    const sorted = wordArr.sort(function(a, b) {
+        return b.length - a.length;
+    })
+    //If multiple words then put into array
+    const longestWordArr = sorted.filter(function(word){
+        return word.length === sorted[0].length;
+    });
+    console.log(longestWordArr);
+}
+
+longestWord('Hello there, my name is Michael');
