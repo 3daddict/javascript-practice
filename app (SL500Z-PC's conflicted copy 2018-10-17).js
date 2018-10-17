@@ -127,31 +127,9 @@ function longestWord(sen){
 
 longestWord('Hello there, my name is Michael');
 
-//Fibonacci 
-function fibonacci(num){
-    if( num === 0){
-        return 0
-    }
-    if(num === 1){
-        return 1
-    }
+//ARRAY CHUNKING
+function chunkArray(arr, len){
 
-    return fibonacci(num - 2) + fibonacci(num - 1);
 }
 
-console.log('Fibonacci: ' + fibonacci(3));
-
-function flattenArr(arr){
-    return arr.reduce(function(a, b) {
-        return a.concat(b);
-    })
-}
-
-console.log('Flatten Array: ' + flattenArr([[1,2], [3,4], [5,6], [7]]));
-
-function flattenArrTwo(arr){
-    return [].concat.apply([], arr);
-}
-
-console.log('Flatten Array Two: ' + flattenArrTwo([[1,2], [3,4], [5,6], [7]]));
-
+console.log('Chunk Array: ' + chunkArray([1,2,3,4,5,6,7], 3));
