@@ -155,3 +155,27 @@ function flattenArrTwo(arr){
 
 console.log('Flatten Array Two: ' + flattenArrTwo([[1,2], [3,4], [5,6], [7]]));
 
+//ANAGRAM
+function isAnagram(str1, str2) {
+    return formatStr(str1) === formatStr(str2);
+
+}
+//helper function
+function formatStr(str){
+    return str.replace(/[^\w]/g, '').toLowerCase().split('').sort().join('')
+}
+
+console.log('isAnagram: ' + isAnagram('elbow', 'below'));
+
+//Letter changes
+function letterChanges(str) {
+    let newStr = str.toLowerCase().replace(/[a-z]/gi, function(char){
+        if(char === 'z' || char === 'Z'){
+            return 'a';
+        } else {
+            return String.fromCharCode(char.charCodeAt() + 1);
+        }
+    });
+    return newStr
+}
+console.log('letterChanges: ' + letterChanges('hello there'));
